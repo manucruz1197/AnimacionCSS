@@ -4,67 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animación de Cuadrado</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #111;
-        }
-        .cuadrado {
-            width: 100px;
-            height: 100px;
-            background-color: #ff0000;
-            position: absolute;
-            animation: movimiento 4s infinite alternate ease-in-out, 
-                       cambioColor 4s infinite alternate ease-in-out, 
-                       zigzag 2s infinite linear;
-        }
-
-        @keyframes movimiento {
-            0% {
-                transform: translateX(-50%) scale(1);
-            }
-            100% {
-                transform: translateX(50vw) scale(1.5);
-            }
-        }
-
-        @keyframes cambioColor {
-            0% {
-                background-color: #ff0000;
-            }
-            50% {
-                background-color: #00ff00;
-            }
-            100% {
-                background-color: #0000ff;
-            }
-        }
-
-        @keyframes zigzag {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            25% {
-                transform: translateY(-50px);
-            }
-            50% {
-                transform: translateY(50px);
-            }
-            75% {
-                transform: translateY(-50px);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="cuadrado"></div>
+    <script src="script.js"></script>
+    <script src="interaction.js"></script>
 </body>
 </html>
